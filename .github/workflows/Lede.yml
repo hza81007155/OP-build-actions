@@ -131,8 +131,7 @@ jobs:
         git clone -q -b "${REPO_BRANCH}" --single-branch "${REPO_URL}" openwrt
         ln -sf /${{ env.DIY_WORK }}/openwrt ${GITHUB_WORKSPACE}/openwrt
         bash ${{ env.COMMON_SH }} Diy_feedsconf
-        echo "SHANG_CHUAN=true" >> ${GITHUB_ENV}
-        
+        echo "SHANG_CHUAN=true" >> ${GITHUB_ENV}    
     - name: 替换自定义 feeds.conf.default
       run: |
     # 完整覆盖写入你自己修改好的feed配置
