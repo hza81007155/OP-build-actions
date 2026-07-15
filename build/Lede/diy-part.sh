@@ -39,6 +39,17 @@ export Customized_Information="$(hza800755 TZ=UTC-8 date "+%Y.%m.%d")"  # 个性
 # 更换固件内核
 export Replace_Kernel="0"                    # 更换内核版本,在对应源码的[target/linux/架构]查看patches-x.x,看看x.x有啥就有啥内核了(填入内核x.x版本号,填0为不作修改)
 
+#  feeds.conf.default件
+cat >> feeds.conf.default <<-'EOF'
+src-git packages https://github.com/coolsnowwolf/packages
+src-git luci https://github.com/coolsnowwolf/luci.git;master
+#src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-23.05
+#src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-24.10
+#src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-25.12
+src-git routing https://github.com/coolsnowwolf/routing
+src-git telephony https://github.com/coolsnowwolf/telephony.git
+EOF
+
 # 设置免密码登录(个别源码本身就没密码的)
 export Password_free_login="0"               # 设置首次登录后台密码为空（进入openwrt后自行修改密码）(1为启用命令,填0为不作修改)
 
