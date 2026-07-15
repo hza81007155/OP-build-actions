@@ -135,7 +135,7 @@ jobs:
     - name: 替换自定义 feeds.conf.default
   run: |
     # 完整覆盖写入你自己修改好的feed配置
-    cat > feeds.conf.default <<-'EOF'
+        cat > feeds.conf.default <<-'EOF'
 # LEAN官方基础源
     src-git packages https://github.com/coolsnowwolf/packages
     src-git luci https://github.com/coolsnowwolf/luci.git;master
