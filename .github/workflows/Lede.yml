@@ -138,11 +138,11 @@ jobs:
     # 完整覆盖写入你自己修改好的feed配置
         cat > feeds.conf.default <<-'EOF'
 # LEAN官方基础源
-     src-git packages https://github.com/coolsnowwolf/packages
-     src-git luci https://github.com/coolsnowwolf/luci.git;master
-     src-git routing https://github.com/coolsnowwolf/routing
-     src-git telephony https://github.com/coolsnowwolf/telephony.git
-     EOF
+        src-git packages https://github.com/coolsnowwolf/packages
+        src-git luci https://github.com/coolsnowwolf/luci.git;master
+        src-git routing https://github.com/coolsnowwolf/routing
+        src-git telephony https://github.com/coolsnowwolf/telephony.git
+        EOF
 
 # 标准更新安装feeds流程
     - name: 更新 & 安装 feeds
